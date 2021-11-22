@@ -1,12 +1,133 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, Helvetica, sans-serif;
+   
+   background-color: white;
+   margin: 0px;
+        
 }
 main {
     display: flex;
     flex-wrap: wrap;
 }
-
-#header {
+h1 {
+    font-size: 2.6em;
+}
+h3 {
+    font-size: 1.5em;
+}
+nav {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.4em;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: right; 
+    background-color: white;   
+}
+.menu-item {
+    text-decoration: none;
+    color: black;
+    margin-left: 1%;
+    margin-right: 2%;
+}
+.section-class {
+    margin-top: 5%;
+}
+.quality-box{
+    border: 1px solid black;
+    padding: 8px 16px 8px 16px;
+    margin-top: 5%;
+    margin-left: 8%;
+    margin-right: 8%;    
+}
+.services-box {
+    width: 275px;
+    background-color: lightsteelblue;
     text-align: center;
-    max-width: 100%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.services-box h3 {
+        color: white;
+    }
+.services-box h2 { 
+        color: yellow;
+    }
+.item-box {
+        width: 230px;
+        height: 300px;
+     /*   border: 1px solid black; */
+        margin: 2%;
+}
+.buy-img {
+    max-width: 230px;
+    max-height: 300px;
+}
+.thick-line {
+    background: lightsteelblue;
+    border: none;
+    height: 3px
+}
+#header {    
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5%;
+    justify-content: space-between;
+    width: 100%;
+}
+#main-name {
+    display: flex;
+    align-self: center;
+}
+
+
+#logo {
+    border: 1px solid black;
+    width: 225px;
+    height: 225px;
+}
+#main-name-text {
+    margin-left: 10%;
+    align-self: center;
+}
+#about{
+    background-color: lightsteelblue;
+}
+#about-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+#about-qualities {
+    display: flex;
+    justify-content: center;   
+}
+#services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#buy-content {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+#item-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 60%;
+}
+#buy-text {
+    justify-content: center;
+    align-content: space-around;
+}
+#contact {
+    background-color: #404040;
+    color: white;
+}
+#contact-container {
+    margin-top: 3%;
+    padding-top: 5%;
+    padding-bottom: 8%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }

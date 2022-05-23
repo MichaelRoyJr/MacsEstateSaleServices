@@ -4,22 +4,36 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="index.js" async></script>
     <title>Mac's Estate Sale Services</title>
 </head>
+<!--
+    <body onload="spin()">
+-->
 
 <body>
     <main>
-        <nav id="nav-bar">
-            <a href="#header" class="menu-item">Home</a>
-            <a href="#about" class="menu-item">About Us</a>
-            <a href="#services" class="menu-item">Services</a>
-            <a href="#buy" class="menu-item">Buy</a>
-            <a href="#contact" class="menu-item">Contact Us</a>
+        <nav class="nav-bar">
+            <div id="nav-wrapper">
+                <div id="nav-links">
+                    <a href="#header" class="menu-item">Home</a>
+                    <a href="#about" class="menu-item">About Us</a>
+                    <a href="#services" class="menu-item">Services</a>
+                    <a href="#buy" class="menu-item">Buy</a>
+                    <a href="#contact" class="menu-item">Contact Us</a>
+                    <a href="javascript:void(0);" class="menu-item" onclick="hamburgerSwap()">Hide Menu</a>
+                </div>
+            </div>
+            <a href="javascript:void(0);" class="icon" id="hamburger" onclick="hamburgerSwap()">
+                <i class="fa fa-bars"></i>
+            </a>
         </nav>
         <section id="header">
             <div id="main-name">
-                <div id="logo">spot for logo</div>
+                <div id="logo">
+                    <img src="resources/logo2.png" id="logo-image" alt="spot for logo">
+                </div>
                 <div id="main-name-text">
                     <h1>Mac's Estate Sale Services</h1>
                     <h3>Estate Sales, Liquidation, and Removal</h3>
@@ -30,16 +44,22 @@
         </section>
         <section>
             <div class="section-class" id="about">
-                <h3>About Us</h3>
+                <h3>Who We Are</h3>
                 <div id="about-content">
-                    <img src="resources/mac1.jpg" id="junk" alt="picture of stuff">
-                    <p>This is where the content will go. We will write this a little bit later. Probably about a
-                        paragraph's worth as well as some sort of picture of some junk laying around waiting to be
-                        disposed
-                        of. Im repeatig this to take up approximately the right amount of space. This is where the
-                        content
-                        will go. We will write this a little bit later. Probably about a paragraph's worth as well as
-                        some sort of picture of some junk laying around waiting to be disposed of.</p>
+                    <div id="about-image">
+                        <img src="resources/mac1.jpg" id="about-photo" alt="picture of stuff">
+                        <p>Mckinley Dambro</p>
+                        <p>Owner</p>
+                    </div>
+                    <p id="about-text">
+                        <br /><br />Mac's Estate Sale Services has been serving the Lansing, MI area for the last five
+                        years. From prepping items for sale, to moving items for consignment, to cleanup and cleanout
+                        services, we do it all. Our careful team will handle your antiques, heirlooms, and personal
+                        items as they were our own. Whether you need a room or building cleaned out, or some items moved
+                        to storage or consignment, we will treat you with a level of care and professionalism that is
+                        hard to find anywhere else. That care extends to our community as well. Over the years, we have
+                        donated large amounts of food and clothing to local foodbanks and thrift stores.
+                    </p>
                 </div>
                 <div id="about-qualities">
                     <p class="quality-box">Honest</p>
@@ -52,59 +72,125 @@
                 <hr class="thick-line">
                 <div id="services-container">
                     <div class="services-box">
-                        <h3>Estate Sales</h3>
-                        <img src="*" class="services-thumbnail" alt="insert photo">
-                        <h2>Learn More</h2>
-                    </div>
-                    <div class="services-box">
-                        <h3>Liquidation</h3>
-                        <img src="*" class="services-thumbnail" alt="insert photo">
-                        <h2>Learn More</h2>
-                    </div>
-                    <div class="services-box">
                         <h3>Junk Removal</h3>
-                        <img src="*" class="services-thumbnail" alt="insert photo">
-                        <h2>Learn More</h2>
+                        <img src="resources/stuff2.jpg" class="services-thumbnail" alt="insert photo">
+                        <br />
+                        <div class="services-more" id="junk-more">
+                            <ul>
+                                <li>Cleanup and cleanout of rooms, garages, storage or even a whole house</li>
+                                <li>We buy antiques and collectibles</li>
+                                <li>Top dollar paid</li>
+                            </ul>
+                            <p>Call for pricing or more info!!</p>
+                        </div>
+                        <button class="learn-more-button" type="button" onclick="learnMore(this)">
+                            <h2 id="removal-button">Learn More</h2>
+                        </button>
+                    </div>
+                    <div class="services-box">
+                        <h3>Estate Sales</h3>
+                        <img src="resources/stuff3.jpg" class="services-thumbnail" alt="insert photo">
+                        <br />
+                        <div class="services-more" id="sales-more">
+                            <ul>
+                                <li>Sale coordination</li>
+                                <li>Prepping for sale</li>
+                                <li>Item appraisal</li>
+                            </ul>
+                            <p>Call us for an estimate</p>
+                            <br />
+                        </div>
+
+                        <button class="learn-more-button" type="button" onclick="learnMore(this)">
+                            <h2 id="sales-button">Learn More</h2>
+                        </button>
+                    </div>
+
+                    <div class="services-box">
+                        <h3>Furniture Moving</h3>
+                        <img src="resources/moving1.jpg" class="services-thumbnail" alt="insert photo">
+                        <br />
+                        <div class="services-more" id="move-more">
+                            <ul>
+                                <li>Moving items to and from storage</li>
+                                <li>Delivery to consignment</li>
+                                <li>Child going to college</li>
+                                <li>Large item haul away</li>
+                            </ul>
+                            <p>Call for pricing!!</p>
+                        </div>
+                        <button class="learn-more-button" type="button" onclick="learnMore(this)">
+                            <h2 id="moving-button">Learn More</h2>
+                        </button>
                     </div>
                 </div>
             </div>
             <div class="section-class" id="buy">
                 <h3>Buy Stuff</h3>
                 <hr class="thick-line">
+                <!--
+                    
+                <div class="slider">
+                    <div class="slide-viewer">
+                        <div class="slide-group">
+                            <div class="slide slide-1">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFpSRf4xbMiAVbDcOzkxmljzmdTmese-CXWw&usqp=CAU"
+                                    alt="item unavailable">
+                            </div>
+                            <div class="slide slide-2">
+                                <img src="https://www.adobegallery.com/metas/display/1519476" alt="item unavailable">
+                            </div>
+                            <div class="slide slide-3">
+                                <img src="https://images.squarespace-cdn.com/content/v1/5d8f5f9f7773ca3bae018811/1625656043204-4YA484CCCPGMM2A57QI4/image-asset.jpeg"
+                                    alt="item unavailable">
+                            </div>
+                            <div class="slide slide-4">
+                                <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQSCDBssuLAxznct6CkdDKtefhACCaSD89yg&usqp=CAU"
+                                    alt="item unavailable">
+                            </div>
+                            <div class="slide slide-5">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRadgPr7_NgPSDNE5PeDXOEVoECnmQ6vF6V6g&usqp=CAU"
+                                    alt="item unavailable">
+                            </div>
+                            <div class="slide slide-6">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5bfDezA1In9R2EsY_SxFkdZNuLZXk1FEqQw&usqp=CAU"
+                                    alt="item unavailable">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slide-buttons"></div>
+                </div>
+            -->
+
                 <div id="buy-content">
                     <div id="item-container">
                         <div class="item-box">
-                            <img src=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFpSRf4xbMiAVbDcOzkxmljzmdTmese-CXWw&usqp=CAU"
-                                class="buy-img" id="cool-item-1" alt="item unavailable">
+                            <img src="resources/buy-1.jpg" class="buy-img" id="cool-item-1" alt="item unavailable">
                         </div>
                         <div class="item-box">
-                            <img src="https://www.adobegallery.com/metas/display/1519476" class="buy-img"
-                                id="cool-item-2" alt="item unavailable">
+                            <img src="resources/buy-2.jpg" class="buy-img" id="cool-item-2" alt="item unavailable">
                         </div>
                         <div class="item-box">
-                            <img src="https://images.squarespace-cdn.com/content/v1/5d8f5f9f7773ca3bae018811/1625656043204-4YA484CCCPGMM2A57QI4/image-asset.jpeg"
-                                class="buy-img" id="cool-item-3" alt="item unavailable">
+                            <img src="resources/buy-3.jpg" class="buy-img" id="cool-item-3" alt="item unavailable">
                         </div>
                         <div class="item-box">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQSCDBssuLAxznct6CkdDKtefhACCaSD89yg&usqp=CAU"
-                                class="buy-img" id="cool-item-4" alt="item unavailable">
+                            <img src="resources/buy-4.jpg" class="buy-img" id="cool-item-4" alt="item unavailable">
                         </div>
                         <div class="item-box">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRadgPr7_NgPSDNE5PeDXOEVoECnmQ6vF6V6g&usqp=CAU"
-                                class="buy-img" id="cool-item-5" alt="item unavailable">
+                            <img src="resources/buy-5.jpg" class="buy-img" id="cool-item-5" alt="item unavailable">
                         </div>
                         <div class="item-box">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS5bfDezA1In9R2EsY_SxFkdZNuLZXk1FEqQw&usqp=CAU"
-                                class="buy-img" id="cool-item-6" alt="item unavailable">
+                            <img src="resources/buy-6.jpg" class="buy-img" id="cool-item-6" alt="item unavailable">
                         </div>
                     </div>
                     <div id="buy-text">
                         <p>This is a selection of some of the more interesting items I have sold.</p>
-                        <p>This will be a slideshow on mobile. Up for discussion on larger screens</p>
+                        <p>To view all of the items I have available and to make a purchase </p>
                         <a href="*">Check out my store</a>
                     </div>
 
                 </div>
+
             </div>
             <div class="section-class" id="contact">
                 <h3>Contact Us</h3>
@@ -116,6 +202,7 @@
             </div>
         </section>
     </main>
+    <script src="index.js"></script>
 </body>
 
 </html>

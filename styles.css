@@ -180,11 +180,14 @@ h3 {
 #about-content {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 #about-qualities {
     display: flex;
     justify-content: center;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 #services-container {
@@ -196,6 +199,7 @@ h3 {
 #buy-content {
     display: flex;
     flex-wrap: wrap-reverse;
+    justify-content: center;
 }
 
 #item-container {
@@ -207,6 +211,8 @@ h3 {
 #buy-text {
     justify-content: center;
     align-content: space-around;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .slide-viewer {

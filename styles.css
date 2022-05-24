@@ -89,6 +89,11 @@ h3 {
 
 .services-more-shown {
     display: block;
+    text-align: left;
+}
+
+.call {
+    text-align: center;
 }
 
 .item-box {

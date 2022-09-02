@@ -257,7 +257,7 @@ h3 {
     justify-content: space-around;
 }
 
-@media screen and (min-width: 900) {
+@media screen and (min-width: 900px) {
 
     nav {
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -276,4 +276,9 @@ h3 {
         margin-right: 2%;
         border: 2px solid black;
     }
+
+    #about-text {
+        margin-left: 5%;
+    }
+
 }
